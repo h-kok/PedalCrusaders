@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pedal Crusaders</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#logo">Home</a>
+                </li>
+                <li>
+                    <a href="#aboutUs">About Us</a>
+                </li>
+                <li>
+                    <a href="#latestAdventures">Latest Adventures</a>
+                </li>
+                <li>
+                    <a href="#contactUs">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#subscribe">Subscribe</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="logo" id="logo">
+            <img src="pedalcrusaders_logo.jpg" />
+        </div>
+
+        <main>
+            <div class="home" id="home">
+                <h3>
+                    Welcome to the official Pedal Crusaders website, where
+                    Amanda and Dave keep you up to date with all their latest
+                    mountain biking adventures!
+                </h3>
+            </div>
+
+            <div class="aboutUs" id="aboutUs">
+                <h1>About Us</h1>
+                <br />
+                <div class="aboutUsgrid">
+                    <div class="imgAmandaDave">
+                        <img src="imgAmandaDave.jpg" />
+                    </div>
+                    <div class="aboutUstext">
+                        <p>
+                            We are about all things that empower mountain
+                            biking, and hope that maybe just one of our vids
+                            encourages someone somewhere to jump on a bike and
+                            ride. The love goes both ways. Throwing ourselves
+                            into mountain biking has made us stronger and we
+                            have been to many great locations for our adrenaline
+                            hit.
+                            <br />
+                            <br />
+
+                            We're about travelling/adventuring around and
+                            finding car camping spots. We're hoping to share our
+                            adventures with everyone and share the good times of
+                            mountain biking, as well as some of our knowledge in
+                            different areas. Amanda's a Physio and Dave never
+                            shuts up.
+                            <br />
+                            <br />
+
+                            By all means if you have a trail that we should know
+                            about, please get in contact and we will do our best
+                            to come ride with you.
+                            <br />
+                            <br />
+                            Keep crusading and pedals out!
+                            <br />
+                            <br />
+                            -Amanda & Dave-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="latestAdventures" id="latestAdventures">
+                <h1>Latest Adventures</h1>
+                <br />
+                <h3>
+                    Check out our latest moutain biking adventure below! Don't
+                    forget to subscribe to the Pedal Crusaders YouTube page to
+                    keep up with the latest action.
+                </h3>
+                <br />
+                <div class="latestAdventuresvid">
+                    <iframe
+                        width="700"
+                        height="400"
+                        src="https://www.youtube.com/embed/WO6mKMIK30w"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+
+            <div class="contactUs" id="contactUs">
+                <h1>Contact Us</h1>
+                <br />
+                <h3>
+                    Have questions or comments for us about mountain biking?
+                    Fill out the form and we will be in contact shortly!
+                </h3>
+                <br />
+                <div class="contactForm">
+                    <form class="contact-form">
+                        <label for="fullName">Full Name: </label>
+                        <input
+                            type="text"
+                            name="fullName"
+                            id="fullName"
+                            required
+                        />
+                        <label for="emailContact">Email: </label>
+                        <input
+                            type="text"
+                            name="emailContact"
+                            id="emailContact"
+                            required
+                        />
+                        <label for="comment">Message: </label>
+                        <textarea name="comment" id="comment" rows="6">
+Type your message here.</textarea
+                        >
+
+                        <button input type="submit">Submit</button>
+                        <button input type="reset">Clear</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="subscribe" id="subscribe">
+                <h1>Subscribe</h1>
+                <br />
+                <h3>
+                    Subscribe to our mailing list and follow us on social media
+                    for the latest Pedal Crusaders news and events!
+                </h3>
+                <br />
+                <br />
+                <br />
+                <div class="subscribeForm">
+                    <form
+                        class="subscribe-form"
+                        onsubmit="return Subscription(event)"
+                    >
+                        <label for="fullNameSubscribe">Full Name: </label>
+                        <input
+                            type="text"
+                            name="fullNameSubscribe"
+                            id="fullNameSubscribe"
+                            required
+                        />
+                        <br />
+                        <label for="emailSubscribe">Email: </label>
+                        <input
+                            type="text"
+                            name="emailSubscribe"
+                            id="emailSubscribe"
+                            required
+                        />
+                        <br />
+                        <button>Subscribe</button>
+                    </form>
+                </div>
+                <div class="subscribeSocialmedia">
+                    <a href="https://www.facebook.com/pedalcrusaders/about"
+                        ><img src="facebookLogo.png" width="50" height="50"
+                    /></a>
+                    <a href="https://www.instagram.com/pedalcrusaders/"
+                        ><img src="instagramLogo.png" width="50" height="50"
+                    /></a>
+                    <a href="https://www.youtube.com/c/PedalCrusaders"
+                        ><img src="youtubeLogo.png" width="50" height="50"
+                    /></a>
+                </div>
+            </div>
+        </main>
+        <footer class="copyright">
+            <p id="currentYear"></p>
+        </footer>
+
+        <script>
+            function Subscription() {
+                //on click of subscribe button, return alert box of 'Thanks <Name>, we'll be in touch shortly!'//
+
+                alert(
+                    "Thanks " +
+                        fullNameSubscribe.value +
+                        ". We'll be in touch shortly!"
+                );
+            }
+
+            {
+                const d = new Date();
+                let year = "&copy " + d.getFullYear() + " Pedal Crusaders";
+                document.getElementById("currentYear").innerHTML = year;
+            }
+        </script>
+    </body>
+</html>
